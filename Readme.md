@@ -37,11 +37,11 @@ Then fill in the details on the next page.
 
 ```
 [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"  
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/AhmedHalat/Parsec-Cloud-Preparation-Tool/archive/patch-test.zip","$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool.zip")  
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/AhmedHalat/Parsec-Cloud-Preparation-Tool/archive/master.zip","$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool.zip")  
 New-Item -Path $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool -ItemType Directory  
 Expand-Archive $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool.Zip -DestinationPath $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool  
-CD $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool\Parsec-Cloud-Preparation-Tool-patch-test\  
-Powershell.exe -File $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool\Parsec-Cloud-Preparation-Tool-patch-test\Loader.ps1
+CD $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool\Parsec-Cloud-Preparation-Tool-master\  
+Powershell.exe -File $ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool\Parsec-Cloud-Preparation-Tool-master\Loader.ps1
 ```
 
 This tool supports:
@@ -63,6 +63,9 @@ Google T4 VW      (Tesla T4 with Virtual Workstation Driver)
 
 ### RDP:  
 Only use RDP to intially setup the instance. Parsec and RDP are not friendly with each other.  
+
+### VNC:
+Use VNC to fix dual display issue on initial startup with parsec. Connect with vnc://${VM-IP} or just the ip on some connectors and the default pass is: 4ubg9sde. This pass should be changed
 
 ### Issues:
 Q. Stuck at 24%  
