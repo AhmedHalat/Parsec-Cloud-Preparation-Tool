@@ -64,6 +64,9 @@ Google T4 VW      (Tesla T4 with Virtual Workstation Driver)
 ### RDP:  
 Only use RDP to intially setup the instance. Parsec and RDP are not friendly with each other.  
 
+### VNC:
+Use VNC to fix dual display issue on initial startup with parsec. Connect with vnc://${VM-IP} or just the ip on some connectors and the default pass is: 4ubg9sde. This pass should be changed
+
 ### Issues:
 Q. Stuck at 24%  
 A. Keep waiting, this installation takes a while.
